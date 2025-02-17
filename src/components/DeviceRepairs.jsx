@@ -9,7 +9,7 @@ const DeviceRepairs = () => {
 
   useEffect(() => {
     const fetchRepairs = async () => {
-      // Reemplaza este token con el que estés utilizando en tu aplicación.
+      // Reemplaza este etoken con el que estés utilizando en tu aplicación.
       const token = "1019f0cd4dd5cc535fe74bae8bd5c81371b742bfbb4f80bc41f94e716c1585f1840ad151241d521f6a9fdd1808fc7245bdcfaf945f91a864508fa5d438ffb04fd8343e958d79837101345a1936f16c82c0aca9beb431e1c1212efcc3a48185f3e21aa46f4d73c212464a48a913f1fcb639b4ff928386f0b8607ff791bb01c2ad";
 
       try {

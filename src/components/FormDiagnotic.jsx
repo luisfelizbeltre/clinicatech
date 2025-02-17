@@ -80,7 +80,7 @@ const DiagnosticoForm = () => {
               </a>
             </div>
 
-            {/* Mapa de Google */}
+            {/* Mapa ded Google */}
             <div className='w-2/2'>
             <MapGoogle />
 
