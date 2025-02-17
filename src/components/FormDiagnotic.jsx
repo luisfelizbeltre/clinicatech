@@ -1,7 +1,7 @@
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import MapGoogle from './MapGoogle'; // Importa el componente
 
-// En tu JSX donde quieres mostrar el mapa
+// En tu JSX doende quieres mostrar el mapa
 
 const DiagnosticoForm = () => {
   return (
