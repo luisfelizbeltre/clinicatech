@@ -11,8 +11,8 @@ import Contacto from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 
 // Nuevos componentes para el buscador y reparaciones
-import DeviceSearch from './components/DeviceSearch'; // Buscador
-import DeviceRepairs from './components/DeviceRepairs'; // Reparaciones
+   {/*import DeviceSearch from './components/DeviceSearch'; // Buscador
+import DeviceRepairs from './components/DeviceRepairs'; // Reparaciones*/}
 
 function App() {
   return (
@@ -25,7 +25,9 @@ function App() {
             <>
               {/* Buscador de dispositivos al inicio */}
               
-              <HeroSection /><DeviceSearch />
+              <HeroSection />
+              
+              {/* <DeviceSearch />*/}
               <Servicios />
               <Steps /> 
               <DiagnosticoForm />
@@ -41,8 +43,8 @@ function App() {
         <Route path="/Servicios" element={<><Servicios /><Footer /></>} />
 
         {/* Nuevas rutas para el buscador y reparaciones */}
-        <Route path="/search" element={<DeviceSearch />} />
-        <Route path="/device/:deviceId" element={<DeviceRepairs />} />
+         {/*   <Route path="/search" element={<DeviceSearch />} />
+        <Route path="/device/:deviceId" element={<DeviceRepairs />} />*/}
       </Routes>
       <WhatsAppButton />
     </Router>

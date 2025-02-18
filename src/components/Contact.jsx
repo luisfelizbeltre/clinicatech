@@ -33,9 +33,9 @@ const Contacto = () => {
                 {/* Información de contacto */}
                 <div className="mt-12">
                     <h3 className="text-2xl font-semibold text-gray-800">Información de Contacto</h3>
-                    <p className="text-gray-600 mt-2">📧 <strong>Email:</strong> info@.com</p>
-                    <p className="text-gray-600">📞 <strong>Teléfono:</strong> +123 456 789</p>
-                    <p className="text-gray-600">📍 <strong>Ubicación:</strong> Calle Tecnología #123, Ciudad</p>
+                    <p className="text-gray-600 mt-2">📧 <strong>Email:</strong> info@doctorvoltio.com</p>
+                    <p className="text-gray-600">📞 <strong>Teléfono:</strong> +34 643 718 864</p>
+                    <p className="text-gray-600">📍 <strong>Ubicación:</strong> Calle Ebanisteria #19, Madrid</p>
 
                     {/* Redes sociales */}
                     <div className="flex justify-center mt-6 space-x-6">

@@ -66,8 +66,8 @@ const DiagnosticoForm = () => {
         <div className="w-full md:w-1/3 bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">¿Necesitas ayuda?</h3>
             <p className="text-gray-600 mb-2">📧 <strong>Email:</strong> info@doctorvoltio.com</p>
-            <p className="text-gray-600 mb-2">📞 <strong>Teléfono:</strong> +123 456 789</p>
-            <p className="text-gray-600 mb-4">📍 <strong>Ubicación:</strong> Calle Tecnología #123, Ciudad</p>
+            <p className="text-gray-600 mb-2">📞 <strong>Teléfono:</strong> +34 643 718 864</p>
+            <p className="text-gray-600 mb-4">📍 <strong>Ubicación:</strong> Calle de la Ebanisteria #19, Madrid</p>
 
             {/* Redes sociales */}
             <div className="flex justify-start gap-4">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { FaMobileAlt, FaTabletAlt, FaLaptop, FaHeadphones, FaGamepad, FaCar, FaClock } from 'react-icons/fa';
 
 const Servicios = () => {
