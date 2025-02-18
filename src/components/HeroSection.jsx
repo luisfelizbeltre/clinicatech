@@ -14,7 +14,7 @@ const HeroSection = () => {
                     ¡Tu dispositivo necesita un chequeo! 💡🔧
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Los dispositivos también pueden enfermar. En Clínica Tech te ofrecemos el mejor diagnóstico y tratamiento para devolverles toda su energía.
+                    Los dispositivos también pueden enfermar. En Doctor Voltio te ofrecemos el mejor diagnóstico y tratamiento para devolverles toda su energía.
                 </p>
 
 

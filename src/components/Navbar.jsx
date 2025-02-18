@@ -42,11 +42,11 @@ const Navbar = () => {
       <div className="relative w-15 h-15 flex items-center justify-center bg-white rounded-full overflow-hidden shadow-md">
         <img
           src={logo}
-          alt="Clínica Tech Logo"
+          alt="Doctor Voltio Logo"
           className="w-15 h-15 object-contain mix-blend-multiply"
         />
       </div>
-      <span className="ml-2">Clínica Del Móvil <br /> & Más</span>
+      <span className="ml-2">Doctor Voltio  <br /> </span>
     </Link>
 
         {/* Botón de menú en móviles */}

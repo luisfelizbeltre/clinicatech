@@ -13,7 +13,7 @@ const AboutUs = () => {
 
         {/* Descripción principal */}
         <p className="text-gray-600 max-w-2xl mx-auto text-center mb-12">
-          En <strong>Clínica Tech</strong>, somos especialistas en diagnosticar y reparar dispositivos electrónicos. Con más de{" "}
+          En <strong>Doctor Voltio</strong>, somos especialistas en diagnosticar y reparar dispositivos electrónicos. Con más de{" "}
           <strong>10 años de experiencia</strong>, nos enorgullece ofrecer un servicio rápido, eficaz y con garantía de satisfacción.
         </p>
 
@@ -23,7 +23,7 @@ const AboutUs = () => {
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestra Historia</h3>
             <p className="text-gray-600">
-              Fundada en 2013, Clínica Tech comenzó como un pequeño taller de reparaciones. Hoy, somos líderes en el sector, atendiendo a miles de clientes al año.
+              Fundada en 2013, Doctor Voltio comenzó como un pequeño taller de reparaciones. Hoy, somos líderes en el sector, atendiendo a miles de clientes al año.
             </p>
           </div>
 

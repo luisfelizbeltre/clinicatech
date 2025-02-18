@@ -33,7 +33,7 @@ const Contacto = () => {
                 {/* Información de contacto */}
                 <div className="mt-12">
                     <h3 className="text-2xl font-semibold text-gray-800">Información de Contacto</h3>
-                    <p className="text-gray-600 mt-2">📧 <strong>Email:</strong> info@clinicatech.com</p>
+                    <p className="text-gray-600 mt-2">📧 <strong>Email:</strong> info@.com</p>
                     <p className="text-gray-600">📞 <strong>Teléfono:</strong> +123 456 789</p>
                     <p className="text-gray-600">📍 <strong>Ubicación:</strong> Calle Tecnología #123, Ciudad</p>
 
