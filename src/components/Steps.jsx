@@ -7,7 +7,9 @@ const ProcesoReparacion = () => {
     ];
 
     return (
-        <div className="bg-white py-16">
+        <div className=" bg-blue-50 py-16">
+                   <p className='bg-white w-full h-6 mb-7' ></p> 
+
             <div className="container mx-auto text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Nuestro Proceso</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

@@ -5,7 +5,9 @@ import MapGoogle from './MapGoogle'; // Importa el componente
 
 const DiagnosticoForm = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-white py-12 px-4  ">
+  
+    <div className="bg-blue-50 py-12 px-4  ">
+       <p className='bg-white w-full h-6 mb-7' ></p> 
       <div className="max-w-7xl mx-auto justify-center flex  flex-col md:flex-row gap-12">
         {/* Formulario */}
         <div className="max-w-lg bg-white p-8 rounded-xl shadow-lg animate-fade-in w-full">

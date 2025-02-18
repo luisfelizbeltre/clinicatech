@@ -22,8 +22,8 @@ const Servicios = () => {
     };
 
     return (
-        <section className="bg-gradient-to-r from-blue-100 to-indigo-200 py-16">
-            <div className="container mx-auto px-6">
+        <section className=" bg-blue-50 py-16">
+            <div className="container mt-9 mx-auto px-6">
                 <h2 className="text-4xl font-extrabold text-gray-800 mb-8 text-center">Nuestros Servicios</h2>
 
                 {/* Mensaje adicional */}

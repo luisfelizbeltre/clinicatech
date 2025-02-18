@@ -5,7 +5,7 @@ import MapGoogle from './MapGoogle'; // Importa el componente
 const Contacto = () => {
     return (
         <div className="bg-gray-100 py-16">
-            <div className="container mx-auto text-center">
+            <div className="container mt-9 mx-auto text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Contacto</h2>
                 <p className="text-gray-600 mb-4">¿Tienes alguna pregunta? ¡Contáctanos!</p>
 

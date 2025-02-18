@@ -5,7 +5,7 @@ import axios from 'axios'; // Instancia de Axios
 const DeviceSearch = () => {
   const [devices, setDevices] = useState([]);
   const [query, setQuery] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [ setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -33,6 +33,7 @@ const DeviceSearch = () => {
       } catch (err) {
         setError('Error al cargar los dispositivos.', err);
         setLoading(false);
+        console.error('Error fetching devices:', error);
       }
     };
 
@@ -55,36 +56,43 @@ const DeviceSearch = () => {
   };
 
   return (
-    <div className="p-8 text-center">
-      <h2 className="text-2xl font-semibold mb-4">Buscar Dispositivos</h2>
-      <input
-        type="text"
-        placeholder="Buscar dispositivo..."
-        value={query}
-        onChange={handleSearchChange}
-        className="p-3 w-72 border-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-500"
-      />
-      {error && <p className="text-red-500">{error}</p>}
-      {loading ? (
-        <div className="text-xl text-gray-500">Cargando dispositivos...</div>
+    <div className="p-8 text-center bg-white rounded-lg ">
+  {/* Título */}
+  <h2 className="text-2xl font-semibold mb-4 text-blue-800">
+    Buscar Dispositivos
+  </h2>
+
+  {/* Barra de búsqueda */}
+  <input
+    type="text"
+    placeholder="Buscar dispositivo..."
+    value={query}
+    onChange={handleSearchChange}
+    className="p-3 w-72 border-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+  />
+
+
+
+
+    <ul className="space-y-2">
+      {/* Mensaje si no hay resultados */}
+      {filteredDevices.length === 0 && query ? (
+        <li className="text-gray-600">No se encontraron dispositivos.</li>
       ) : (
-        <ul className="space-y-2">
-          {filteredDevices.length === 0 && query ? (
-            <li className="text-gray-500">No se encontraron dispositivos.</li>
-          ) : (
-            filteredDevices.map((device) => (
-              <li
-                key={device.id}
-                onClick={() => handleDeviceSelect(device.id)}
-                className="cursor-pointer hover:bg-gray-200 p-2 rounded-lg transition-colors"
-              >
-                {device.name}
-              </li>
-            ))
-          )}
-        </ul>
+        /* Lista de dispositivos */
+        filteredDevices.map((device) => (
+          <li
+            key={device.id}
+            onClick={() => handleDeviceSelect(device.id)}
+            className="cursor-pointer p-3 rounded-lg transition-colors duration-300 bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-800 border border-gray-200 hover:border-blue-300"
+          >
+            {device.name}
+          </li>
+        ))
       )}
-    </div>
+    </ul>
+  
+</div>
   );
 };
 
