@@ -1,5 +1,6 @@
 import MapGoogle from './MapGoogle'; // Importa el componente
-
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const Contacto = () => {
@@ -38,17 +39,17 @@ const Contacto = () => {
                     <p className="text-gray-600">📍 <strong>Ubicación:</strong> Calle Ebanisteria #19, Madrid</p>
 
                     {/* Redes sociales */}
-                    <div className="flex justify-center mt-6 space-x-6">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/facebook.svg" alt="Facebook" className="w-8 h-8" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/twitter.svg" alt="Twitter" className="w-8 h-8" />
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/instagram.svg" alt="Instagram" className="w-8 h-8" />
-                        </a>
-                    </div>
+                     <div className="flex justify-center gap-4">
+                                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <FaFacebook className="w-8 h-8 text-blue-600 hover:text-blue-800 transition" />
+                                  </a>
+                                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                    <FaXTwitter className="w-8 h-8 text-black hover:text-blue-600 transition" />
+                                  </a>
+                                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                    <FaInstagram className="w-8 h-8 text-pink-600 hover:text-pink-800 transition" />
+                                  </a>
+                                </div>
                 </div>
             </div>
            
