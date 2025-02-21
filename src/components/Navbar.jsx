@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Home, Settings, Stethoscope, Mail, Users, BookOpen } from "lucide-react";
-import logo from "../assets/logo.webp"; 
+import logo from "../assets/logokd.webp"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

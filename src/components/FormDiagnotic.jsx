@@ -1,9 +1,46 @@
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import MapGoogle from './MapGoogle'; // Importa el componente
-
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 // En tu JSX doende quieres mostrar el mapa
 
 const DiagnosticoForm = () => {
+
+
+  const [formData, setFormData] = useState({
+    nombre: "",
+    dispositivo: "Móvil",
+    problema: "",
+    contacto: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!formData.nombre || !formData.problema) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    const serviceID = "service_efag9dt";  
+    const templateID = "template_uv000h9"; 
+    const publicKey = "SyiIRDQJMHu9_Ih8z"; 
+
+    emailjs
+      .send(serviceID, templateID, formData, publicKey)
+      .then(() => {
+        alert("Mensaje enviado con éxito");
+        setFormData({ nombre: "", dispositivo: "Móvil", problema: "" });
+      })
+      .catch((error) => {
+        console.error("Error al enviar:", error);
+        alert("Error al enviar el mensaje. Inténtalo de nuevo.");
+      });
+  };
   return (
   
     <div className="bg-blue-50 py-12 px-4  ">
@@ -14,51 +51,94 @@ const DiagnosticoForm = () => {
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
             Solicita tu Diagnóstico
           </h2>
-          <form>
-            <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2" htmlFor="nombre">
-                Nombre
-              </label>
-              <input
-                type="text"
-                id="nombre"
-                placeholder="Tu nombre"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-              />
-            </div>
+          <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+        <label className="block text-gray-700 font-medium mb-2" htmlFor="nombre">
+          Nombre
+        </label>
+        <input
+          type="text"
+          id="nombre"
+          placeholder="Tu nombre"
+          value={formData.nombre}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 font-medium mb-2" htmlFor="contacto">
+          Dato de contacto
+        </label>
+        <input
+          type="text"
+          id="contacto"
+          placeholder="Tu correo o teléfono"
+          value={formData.contacto}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        />
+      </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2" htmlFor="dispositivo">
-                Dispositivo
-              </label>
-              <select
-                id="dispositivo"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-              >
-                <option>Móvil</option>
-                <option>Tablet</option>
-                <option>PC</option>
-              </select>
-            </div>
+        <label className="block text-gray-700 font-medium mb-2" htmlFor="dispositivo">
+          Dispositivo
+        </label>
+        <select
+          id="dispositivo"
+          value={formData.dispositivo}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        >
+          <option>Móvil</option>
+          <option>Tablet</option>
+          <option>PC</option>
+          <option>Consola</option>
+          <option>Patinete Eléctrico</option>
+          <option>Hoverboard</option>
+        </select>
+      </div>
 
-            <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2" htmlFor="problema">
-                Problema
-              </label>
-              <textarea
-                id="problema"
-                rows="4"
-                placeholder="Describe el problema"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-              ></textarea>
-            </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 font-medium mb-2" htmlFor="problema">
+          Problema
+        </label>
+        <select
+          id="problema"
+          value={formData.problema}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        >
+          <option value="">Selecciona un problema</option>
+          <option>Pantalla rota</option>
+          <option>Batería dañada</option>
+          <option>Problema con el software</option>
+          <option>Fallo en la carga</option>
+          <option>Sobrecalentamiento</option>
+          <option>Problema en botones</option>
+          <option>Otro (describa en comentarios)</option>
+        </select>
+      </div>
 
-            <button
-              type="submit"
-              className="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-300"
-            >
-              Enviar
-            </button>
+      <div className="mb-4">
+        <label className="block text-gray-700 font-medium mb-2" htmlFor="descripcion">
+          Descripción adicional
+        </label>
+        <textarea
+          id="descripcion"
+          rows="4"
+          placeholder="Describe el problema con más detalle"
+          value={formData.descripcion}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-300"
+      >
+        Enviar
+      </button>
           </form>
         </div>
 
