@@ -1,4 +1,6 @@
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
+
 import MapGoogle from './MapGoogle'; // Importa el componente
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -155,7 +157,7 @@ const DiagnosticoForm = () => {
                 <FaFacebook className="w-8 h-8 text-blue-600 hover:text-blue-800 transition" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="w-8 h-8 text-blue-400 hover:text-blue-600 transition" />
+                <FaXTwitter className="w-8 h-8 text-black hover:text-blue-600 transition" />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="w-8 h-8 text-pink-600 hover:text-pink-800 transition" />
